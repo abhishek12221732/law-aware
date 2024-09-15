@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/law-aware/static/css/main.51014cb4.css",
-    "main.js": "/law-aware/static/js/main.56ac1004.js",
-    "static/js/453.171de0aa.chunk.js": "/law-aware/static/js/453.171de0aa.chunk.js",
-    "static/media/emblem.png": "/law-aware/static/media/emblem.af38e49dacf4a76600f3.png",
-    "index.html": "/law-aware/index.html",
-    "main.51014cb4.css.map": "/law-aware/static/css/main.51014cb4.css.map",
-    "main.56ac1004.js.map": "/law-aware/static/js/main.56ac1004.js.map",
-    "453.171de0aa.chunk.js.map": "/law-aware/static/js/453.171de0aa.chunk.js.map"
+    "main.css": "/static/css/main.51014cb4.css",
+    "main.js": "/static/js/main.9bbd7c57.js",
+    "static/js/453.171de0aa.chunk.js": "/static/js/453.171de0aa.chunk.js",
+    "static/media/emblem.png": "/static/media/emblem.af38e49dacf4a76600f3.png",
+    "index.html": "/index.html",
+    "main.51014cb4.css.map": "/static/css/main.51014cb4.css.map",
+    "main.9bbd7c57.js.map": "/static/js/main.9bbd7c57.js.map",
+    "453.171de0aa.chunk.js.map": "/static/js/453.171de0aa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.51014cb4.css",
-    "static/js/main.56ac1004.js"
+    "static/js/main.9bbd7c57.js"
   ]
 }
