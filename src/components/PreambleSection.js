@@ -19,11 +19,11 @@ function PreambleSection() {
         scrollTrigger: {
           trigger: char,
           start: 'top 80%',
-          end: 'top 20%',
-          scrub: true,
+          end: 'top 70%',
+          scrub: 1,
         },
         opacity: 0.2,
-        stagger: 0.1,
+        stagger: 1,
       }
     );
     })
