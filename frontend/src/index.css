@@ -44,17 +44,15 @@ code {
 .highlight-text {
   font-size: 1.5rem;
   text-align: center;
-  font-size: 48px;
-  padding: 2% 10%;
+  font-size: 30px;
+  padding: 0.75% 5%;
   color: white;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  word-break: keep-all; /* Prevents word breaking */
+  word-break: keep-all;
  
 }
 
 .highlight-heading{
-  font-size: 60px;
+  font-size: 40px;
 }
 
 
