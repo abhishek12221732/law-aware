@@ -1,4 +1,4 @@
-import Post from '../models/post.model.js';
+import News from '../models/news.model.js';
 import { errorHandler } from '../utils/error.js';
 
 export const create = async (req, res, next) => {
@@ -13,25 +13,31 @@ export const create = async (req, res, next) => {
     .join('-')
     .toLowerCase()
     .replace(/[^a-zA-Z0-9-]/g, '');
-  const newPost = new Post({
+    const content = req.body.content;
+    const image = req.body.image;
+    const category = req.body.image;
+  const newNews = new News({
     ...req.body,
     slug,
     userId: req.user.id,
+    content,
+    image,
+    category
   });
   try {
-    const savedPost = await newPost.save();
+    const savedPost = await newNews.save();
     res.status(201).json(savedPost);
   } catch (error) {
     next(error);
   }
 };
 
-export const getposts = async (req, res, next) => {
+export const getnews = async (req, res, next) => {
   try {
     const startIndex = parseInt(req.query.startIndex) || 0;
     const limit = parseInt(req.query.limit) || 9;
     const sortDirection = req.query.order === 'asc' ? 1 : -1;
-    const posts = await Post.find({
+    const posts = await News.find({
       ...(req.query.userId && { userId: req.query.userId }),
       ...(req.query.category && { category: req.query.category }),
       ...(req.query.slug && { slug: req.query.slug }),
@@ -47,7 +53,7 @@ export const getposts = async (req, res, next) => {
       .skip(startIndex)
       .limit(limit);
 
-    const totalPosts = await Post.countDocuments();
+    const totalPosts = await News.countDocuments();
 
     const now = new Date();
 
@@ -57,7 +63,7 @@ export const getposts = async (req, res, next) => {
       now.getDate()
     );
 
-    const lastMonthPosts = await Post.countDocuments({
+    const lastMonthPosts = await News.countDocuments({
       createdAt: { $gte: oneMonthAgo },
     });
 
@@ -71,8 +77,8 @@ export const getposts = async (req, res, next) => {
   }
 };
 
-export const deletepost = async (req, res, next) => {
-  if (!req.user.isAdmin || req.user.id !== req.params.userId) {
+export const deletenews = async (req, res, next) => {
+  if (!req.user.isAdmin) {
     return next(errorHandler(403, 'You are not allowed to delete this post'));
   }
   try {
@@ -83,7 +89,7 @@ export const deletepost = async (req, res, next) => {
   }
 };
 
-export const updatepost = async (req, res, next) => {
+export const updatenews = async (req, res, next) => {
   if (!req.user.isAdmin || req.user.id !== req.params.userId) {
     return next(errorHandler(403, 'You are not allowed to update this post'));
   }
