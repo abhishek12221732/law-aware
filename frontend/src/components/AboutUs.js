@@ -3,7 +3,7 @@ import justicelady from '../assets/images/justicelady.png';
 
 const AboutUs = () => {
   return (
-    <div className="flex items-center justify-center bg-gray-900 p-8 z-100">
+    <div className="flex items-center justify-center bg-black p-8 z-100">
       {/* Image on the left */}
       <div className="w-1/2 z-100">
         <img
