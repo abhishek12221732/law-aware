@@ -31,7 +31,7 @@ function PreambleSection() {
   }, []);
 
   return (
-    <div className='text-7xl px-32'>
+    <div className='text-7xl px-32 bg-black'>
       <h1 className='highlight-text highlight-heading'>Preamble of The Constitution of India</h1>
       <p className='highlight-text'>We, the people of India, having solemnly resolved to constitute India into a Sovereign Socialist Secular Democratic Republic and to secure to all its citizens:</p>
       

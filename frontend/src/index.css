@@ -43,7 +43,7 @@ code {
 
 .highlight-text {
   font-size: 1.5rem;
-  text-align: center;
+  text-align: left;
   font-size: 30px;
   padding: 0.75% 5%;
   color: white;
@@ -83,3 +83,77 @@ code {
   animation: slideInRight 0.5s forwards;
 }
 
+.hero-heading{
+  /* Your Rights, Your Power. */
+
+
+
+  font-family: 'Abhaya Libre';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 90%;
+  /* or 90px */
+
+  background: linear-gradient(258.44deg, #FAD47D 4.55%, #AB7529 42.13%, #D3A553 82.84%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+
+.hero-text{
+  /* An One-Stop Learning Solution about the Laws and Rights that protect you. */
+
+
+
+font-family: 'Gothic A1';
+font-style: normal;
+font-weight: 250;
+font-size: 27px;
+line-height: 34px;
+letter-spacing: 0.04em;
+
+color: #FFFFFF;
+
+
+}
+
+
+.hero-button{
+  /* Rectangle 2 */
+
+/* Rectangle 2 */
+
+background: #1B1818;
+box-shadow: 0px 4px 4.5px rgba(0, 0, 0, 0.15);
+border-radius: 20px;
+
+
+}
+
+.hero-button-text{
+  /* Get Started */
+
+
+
+font-family: 'Gothic A1';
+font-style: normal;
+font-weight: 500;
+font-size: 27px;
+line-height: 34px;
+/* identical to box height */
+letter-spacing: 0.04em;
+
+background: linear-gradient(90deg, #FAD47D 0%, #AB7529 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+
+
+}
