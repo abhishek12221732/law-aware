@@ -10,6 +10,8 @@ import Chatbot from './components/Chatbot';
 import LoginPage from './components/LoginPage';
 import RegisterPage from './components/RegisterPage';
 import ArticleList from './components/ArticlesPage';
+import SingleArticle from './components/SingleArticle';
+import QuizPage from './components/QuizPage';
 
 function App() {
   useEffect(() => {
@@ -38,6 +40,8 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage/>} />
         <Route path="/article" element={<ArticleList/>} />
+        <Route path="/article/:articleId" element={<SingleArticle />} />
+        <Route path="/quiz" element={<QuizPage />} />
         {/* Add more routes as needed */}
         
       </Routes>

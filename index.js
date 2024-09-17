@@ -5,6 +5,7 @@ import userRoutes from './routes/user.route.js';
 import authRoutes from './routes/auth.route.js';
 import newsRoutes from './routes/news.route.js';
 import quizRoutes from './routes/quiz.route.js';
+import articleRoutes from './routes/article.route.js';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 import path from 'path';
@@ -42,6 +43,7 @@ app.use('/api/user', userRoutes);
 app.use('/api/auth', authRoutes);
 // quiz routes
 app.use('/api/news', newsRoutes);
+app.use('/api/article', articleRoutes);
 app.use('/api/quizzes', quizRoutes);
 
 

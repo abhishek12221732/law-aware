@@ -1,0 +1,181 @@
+[
+    {
+      "question": "What is the supreme law of India?",
+      "options": ["The Constitution of India", "The Penal Code", "The Civil Code", "The Labour Law"],
+      "correctAnswer": "The Constitution of India"
+    },
+    {
+      "question": "Which article of the Indian Constitution guarantees the Right to Equality?",
+      "options": ["Article 14", "Article 21", "Article 19", "Article 32"],
+      "correctAnswer": "Article 14"
+    },
+    {
+      "question": "What is the minimum age for a person to be eligible to become the President of India?",
+      "options": ["35 years", "30 years", "40 years", "25 years"],
+      "correctAnswer": "35 years"
+    },
+    {
+      "question": "Who is known as the Father of the Indian Constitution?",
+      "options": ["Jawaharlal Nehru", "Sardar Patel", "B.R. Ambedkar", "Mahatma Gandhi"],
+      "correctAnswer": "B.R. Ambedkar"
+    },
+    {
+      "question": "Which article provides for the abolition of untouchability?",
+      "options": ["Article 17", "Article 19", "Article 21", "Article 32"],
+      "correctAnswer": "Article 17"
+    },
+    {
+      "question": "Which amendment of the Indian Constitution introduced the concept of 'Directive Principles of State Policy'?",
+      "options": ["1st Amendment", "42nd Amendment", "44th Amendment", "73rd Amendment"],
+      "correctAnswer": "42nd Amendment"
+    },
+    {
+      "question": "The Indian Constitution came into effect on which date?",
+      "options": ["January 26, 1950", "August 15, 1947", "January 1, 1951", "October 2, 1952"],
+      "correctAnswer": "January 26, 1950"
+    },
+    {
+      "question": "What is the maximum term for the President of India?",
+      "options": ["5 years", "6 years", "4 years", "3 years"],
+      "correctAnswer": "5 years"
+    },
+    {
+      "question": "Which body has the power to amend the Constitution of India?",
+      "options": ["Parliament", "Supreme Court", "President", "Governor"],
+      "correctAnswer": "Parliament"
+    },
+    {
+      "question": "Who appoints the Prime Minister of India?",
+      "options": ["President", "Chief Justice", "Parliament", "Lok Sabha"],
+      "correctAnswer": "President"
+    },
+    {
+      "question": "Which article of the Indian Constitution guarantees the Right to Freedom of Speech and Expression?",
+      "options": ["Article 19", "Article 21", "Article 32", "Article 25"],
+      "correctAnswer": "Article 19"
+    },
+    {
+      "question": "Which part of the Indian Constitution deals with Fundamental Rights?",
+      "options": ["Part III", "Part IV", "Part V", "Part VI"],
+      "correctAnswer": "Part III"
+    },
+    {
+      "question": "What is the role of the Rajya Sabha in the Indian Parliament?",
+      "options": ["Upper House", "Lower House", "Legislative Assembly", "Judiciary"],
+      "correctAnswer": "Upper House"
+    },
+    {
+      "question": "Who has the power to dissolve the Lok Sabha?",
+      "options": ["Prime Minister", "President", "Chief Justice", "Governor"],
+      "correctAnswer": "President"
+    },
+    {
+      "question": "Which article deals with the appointment of the Chief Justice of India?",
+      "options": ["Article 124", "Article 50", "Article 76", "Article 312"],
+      "correctAnswer": "Article 124"
+    },
+    {
+      "question": "Which amendment of the Indian Constitution is known as the 'Ministry of Home Affairs' Amendment?",
+      "options": ["73rd Amendment", "74th Amendment", "42nd Amendment", "44th Amendment"],
+      "correctAnswer": "44th Amendment"
+    },
+    {
+      "question": "Which article provides for the right to constitutional remedies?",
+      "options": ["Article 32", "Article 226", "Article 19", "Article 21"],
+      "correctAnswer": "Article 32"
+    },
+    {
+      "question": "What is the term used to describe the President’s powers to dissolve the Parliament?",
+      "options": ["Emergency Powers", "Dissolution Powers", "Legislative Powers", "Executive Powers"],
+      "correctAnswer": "Dissolution Powers"
+    },
+    {
+      "question": "What is the maximum number of members in the Lok Sabha?",
+      "options": ["545", "550", "560", "600"],
+      "correctAnswer": "550"
+    },
+    {
+      "question": "Which article deals with the abolition of the practice of 'Sati'?",
+      "options": ["Article 15", "Article 17", "Article 25", "Article 32"],
+      "correctAnswer": "Article 17"
+    },
+    {
+      "question": "Which article of the Indian Constitution provides for the appointment of the Comptroller and Auditor General?",
+      "options": ["Article 148", "Article 150", "Article 156", "Article 162"],
+      "correctAnswer": "Article 148"
+    },
+    {
+      "question": "Which amendment introduced the 'Right to Education' as a Fundamental Right?",
+      "options": ["86th Amendment", "92nd Amendment", "97th Amendment", "101st Amendment"],
+      "correctAnswer": "86th Amendment"
+    },
+    {
+      "question": "Which article of the Constitution of India provides for the protection of the rights of minorities?",
+      "options": ["Article 29", "Article 30", "Article 31", "Article 32"],
+      "correctAnswer": "Article 30"
+    },
+    {
+      "question": "Who has the authority to declare a state emergency in India?",
+      "options": ["President", "Prime Minister", "Governor", "Chief Justice"],
+      "correctAnswer": "President"
+    },
+    {
+      "question": "Which article deals with the powers of the Governor of a state?",
+      "options": ["Article 153", "Article 154", "Article 155", "Article 156"],
+      "correctAnswer": "Article 154"
+    },
+    {
+      "question": "Which article deals with the appointment of the Chief Election Commissioner?",
+      "options": ["Article 324", "Article 325", "Article 326", "Article 327"],
+      "correctAnswer": "Article 324"
+    },
+    {
+      "question": "Which amendment granted reservation for Scheduled Tribes and Scheduled Castes in educational institutions?",
+      "options": ["76th Amendment", "77th Amendment", "78th Amendment", "79th Amendment"],
+      "correctAnswer": "77th Amendment"
+    },
+    {
+      "question": "What is the minimum age required to become a member of the Rajya Sabha?",
+      "options": ["30 years", "35 years", "25 years", "40 years"],
+      "correctAnswer": "30 years"
+    },
+    {
+      "question": "Which part of the Constitution deals with the Union and its Territory?",
+      "options": ["Part I", "Part II", "Part III", "Part IV"],
+      "correctAnswer": "Part I"
+    },
+    {
+      "question": "Which article provides for the protection of cultural and educational rights of minorities?",
+      "options": ["Article 29", "Article 30", "Article 31", "Article 32"],
+      "correctAnswer": "Article 29"
+    },
+    {
+      "question": "What is the maximum term for a member of the Rajya Sabha?",
+      "options": ["6 years", "5 years", "4 years", "3 years"],
+      "correctAnswer": "6 years"
+    },
+    {
+      "question": "Which article of the Constitution empowers the Parliament to enact laws on subjects in the Union List?",
+      "options": ["Article 246", "Article 249", "Article 250", "Article 251"],
+      "correctAnswer": "Article 246"
+    },
+    {
+      "question": "Which article of the Indian Constitution provides for the composition of the Supreme Court?",
+      "options": ["Article 124", "Article 125", "Article 126", "Article 127"],
+      "correctAnswer": "Article 124"
+    },
+    {
+      "question": "Which article of the Constitution provides for the setting up of a State Public Service Commission?",
+      "options": ["Article 315", "Article 316", "Article 317", "Article 318"],
+      "correctAnswer": "Article 315"
+    },
+    {
+      "question": "Which article provides for the establishment of the Indian Council of Agricultural Research?",
+      "options": ["Article 37", "Article 48", "Article 51", "Article 52"],
+      "correctAnswer": "Article 48"
+    },
+    {
+      "question": "Which article of the Constitution deals with the State of Emergency?",
+      "options": ["Article 352", "Article 356", "Article 360", "Article 365"],
+      "correctAnswer": "Article 352"
+    }]
