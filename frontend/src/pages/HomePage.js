@@ -5,7 +5,7 @@ import PreambleSection from "../components/PreambleSection.js";
 import NewsSection from "../components/NewsSection.js";
 import AboutUs from "../components/AboutUs.js";
 import FAQSection from "../components/FAQSection.js";
-import arrowIcon from "../assets/images/arrow1.png";
+import line from "../assets/images/line.png";
 
 const HomePage = () => {
   return (
@@ -26,9 +26,9 @@ const HomePage = () => {
               to="/awareness"
               className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hero-button"
             ><div className="hero-button-text flex justify-between">Get Started 
-            <img
+            {/* <img
                 src={arrowIcon}
-              />
+              /> */}
             </div>
               
             </Link>
@@ -48,16 +48,18 @@ const HomePage = () => {
       </section>
 
       {/* Preamble of Indian Constitution */}
-      <section>
+      <section className="bg-black">
         <PreambleSection />
-      </section>
+ 
 
       {/* News Section of Page */}
-      <section>
+      <img src={line} className="lines mx-auto"></img>
+   
         <NewsSection />
+        <img src={line} className="lines mx-auto mt-12"></img>
       </section>
-
-      {/* Abiut Us Section */}
+      
+      {/* About Us Section */}
       <section>
         <AboutUs />
       </section>
