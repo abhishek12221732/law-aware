@@ -40,31 +40,50 @@ export const signup = async (req, res, next) => {
 export const signin = async (req, res, next) => {
   const { email, password } = req.body;
 
-  if (!email || !password || email === "" || password === "") {
-    next(errorHandler(400, "All fields are required"));
+  // Validate input
+  if (!email || !password) {
+    return next(errorHandler(400, "All fields are required"));
   }
 
   try {
+    // Check if the user exists
     const validUser = await User.findOne({ email });
     if (!validUser) {
       return next(errorHandler(404, "User not found"));
     }
+
+    // Check if the password is valid
     const validPassword = bcryptjs.compareSync(password, validUser.password);
     if (!validPassword) {
       return next(errorHandler(400, "Invalid password"));
     }
+
+    // Generate JWT token
     const token = jwt.sign(
       { id: validUser._id, isAdmin: validUser.isAdmin },
-      process.env.JWT_SECRET
+      process.env.JWT_SECRET,
+      { expiresIn: '7d' } // Token expires in 7 days
     );
 
-    const { password: pass, ...rest } = validUser._doc;
+    // Exclude password from the returned user object
+    const { password: pass, ...userDetails } = validUser._doc;
 
+    // Set the token in the cookie with security settings
     res.cookie("access_token", token, {
-        httpOnly: true,
-      })
-      res.status(200).json(rest);
+      httpOnly: true, // Prevent JavaScript access to cookies
+      secure: process.env.NODE_ENV === 'production', // Use HTTPS in production
+      sameSite: process.env.NODE_ENV === 'production' ? 'Strict' : 'Lax', // Prevent CSRF
+      maxAge: 7 * 24 * 60 * 60 * 1000 // Cookie expires in 7 days
+    });
+
+    // Send user details (without the password) as a response
+    res.status(200).json({
+      success: true,
+      user: userDetails
+    });
+
   } catch (error) {
+    // Handle any errors
     next(error);
   }
 };

@@ -4,8 +4,8 @@ import {
   createArticle,
   getAllArticles,
   getSingleArticle,
-  deleteArticle,
   updateArticle,
+  updateReadArticle,
 } from '../controllers/article.controller.js';
 
 const router = express.Router();
@@ -16,11 +16,13 @@ router.post('/create', verifyToken, isAdmin, createArticle);
 // Get all articles (article number and title only)
 router.get('/getall', getAllArticles);
 
+router.post('/read/:articleId',verifyToken,updateReadArticle);
+
 // Get a single article by ID (article number, title, description)
 router.get('/get/:articleId', getSingleArticle);
 
 // Delete an article (admin only)
-router.delete('/delete/:id', verifyToken, isAdmin, deleteArticle);
+// router.delete('/delete/:id', verifyToken, isAdmin, deleteArticle); //
 
 // Update an article (admin only)
 router.put('/update/:id', verifyToken, isAdmin, updateArticle);

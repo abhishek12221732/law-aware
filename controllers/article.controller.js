@@ -1,4 +1,5 @@
 import Article from '../models/article.model.js';
+import User from '../models/user.model.js';
 import { errorHandler } from '../utils/error.js';
 
 // Create an article (admin only)
@@ -84,29 +85,40 @@ export const getAllArticles = async (req, res, next) => {
 
 // Get a single article by ID (article number, title, and description)
 export const getSingleArticle = async (req, res, next) => {
-  try {
-    const article = await Article.findById(req.params.articleId);
-    if (!article) {
-      return next(errorHandler(404, 'Article not found'));
+    try {
+        const article = await Article.findById(req.params.articleId);
+        if (!article) {
+            return next(errorHandler(404, 'Article not found'));
+        }
+
+        res.status(200).json(article);
+        console.log(req.user);
+    } catch (error) {
+        next(error);
     }
-    res.status(200).json(article);
-  } catch (error) {
-    next(error);
-  }
 };
 
-// Delete an article (admin only)
-export const deleteArticle = async (req, res, next) => {
-  if (!req.user.isAdmin) {
-    return next(errorHandler(403, 'You are not allowed to delete this article'));
-  }
-  try {
-    await Article.findByIdAndDelete(req.params.articleId);
-    res.status(200).json('The article has been deleted');
-  } catch (error) {
-    next(error);
-  }
+export const updateReadArticle = async (req, res, next) => {
+    try {
+        const user = await User.findById(req.user.id);
+
+        // Check if the article has already been added to the user's readArticles
+        if (!user.readArticles.includes(req.params.articleId)) {
+            user.readArticles.push(req.params.articleId);
+            await user.save();
+
+            return res.status(200).json({ message: 'Article added to read list' });
+        }
+
+        res.status(200).json({ message: 'Article already in read list' });
+    } catch (error) {
+        next(error);
+    }
 };
+
+
+
+
 
 // Update an article (admin only)
 export const updateArticle = async (req, res, next) => {

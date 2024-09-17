@@ -12,12 +12,26 @@ const SingleArticle = () => {
   const [bookmarked, setBookmarked] = useState(false);
   const { articleId } = useParams();
 
+  // Function to ping the backend and mark the article as read
+  const markArticleAsRead = async (articleId) => {
+    try {
+      // POST request to mark the article as read if user is logged in
+      await axios.post(`${base_url}/api/article/read/${articleId}`, {}, { withCredentials: true });
+    } catch (err) {
+      console.error('Failed to mark the article as read', err);
+    }
+  };
+
   useEffect(() => {
     const fetchArticle = async () => {
       try {
-        const response = await axios.get(`${base_url}/api/article/get/${articleId}`);
+        // Fetch the article from the backend
+        const response = await axios.get(`${base_url}/api/article/get/${articleId}`, { withCredentials: true });
         setArticle(response.data);
         setIsLoading(false);
+
+        // Mark the article as read after successful fetch
+        markArticleAsRead(articleId);
       } catch (err) {
         setError('Failed to load the article. Please try again later.');
         setIsLoading(false);
