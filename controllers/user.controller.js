@@ -1,6 +1,7 @@
 import bcryptjs from 'bcryptjs';
 import { errorHandler } from '../utils/error.js';
 import User from '../models/user.model.js';
+import Article from '../models/article.model.js';
 
 export const test = (req, res) => {
   res.json({ message: 'API is working!' });
@@ -118,6 +119,28 @@ export const getUsers = async (req, res, next) => {
     next(error);
   }
 };
+
+
+export const getUserProfile = async (req, res, next) => {
+  try {
+    const user = await User.findById(req.user.id).populate('readArticles', 'article title');
+    const totalArticles = await Article.countDocuments();
+
+    const performanceReport = {
+      username: user.username,
+      email: user.email,
+      readArticles: user.readArticles,
+      totalArticles: totalArticles,
+      readCount: user.readArticles.length,
+      readPercentage: (user.readArticles.length / totalArticles) * 100,
+    };
+
+    res.status(200).json(performanceReport);
+  } catch (error) {
+    next(error);
+  }
+};
+
 
 export const getUser = async (req, res, next) => {
   try {

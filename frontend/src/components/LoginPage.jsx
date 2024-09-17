@@ -25,11 +25,12 @@ export default function LoginPage() {
     setError('');
 
     try {
-      const res = await fetch(`${base_url}/api/auth/signin`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
+        const res = await fetch(`${base_url}/api/auth/signin`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData),
+            credentials: 'include', // This ensures cookies are sent/received
+          });
       const data = await res.json();
 
       if (!res.ok) {

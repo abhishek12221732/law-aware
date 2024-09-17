@@ -25,6 +25,10 @@ const userSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    readArticles: [{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Article',
+    }]
   },
   { timestamps: true }
 );

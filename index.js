@@ -28,8 +28,12 @@ const __dirname = path.resolve();
 
 const app = express();
 
- // Apply CORS policy
- app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:3000',  // Replace with your frontend domain
+  credentials: true,  // Allow cookies to be sent/received
+}));
+
+
 app.use(cookieParser()); // To parse cookies
 app.use(bodyParser.json());
 
