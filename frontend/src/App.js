@@ -7,6 +7,8 @@ import GamesPage from './pages/GamesPage';
 import Navbar from './components/Navbar';
 import Lenis from '@studio-freight/lenis';
 import Chatbot from './components/Chatbot';
+import LoginPage from './components/LoginPage';
+import RegisterPage from './components/RegisterPage';
 
 function App() {
   useEffect(() => {
@@ -32,6 +34,8 @@ function App() {
         <Route path="/awareness" element={<AwarenessPage />} />
         <Route path="/news" element={<NewsPage />} />
         <Route path="/games" element={<GamesPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage/>} />
         {/* Add more routes as needed */}
         
       </Routes>
