@@ -31,7 +31,6 @@ const AwarenessPage = () => {
   return (
     <div className="min-h-screen bg-gray-100 p-8 mt-16">
       <h1 className="text-4xl font-bold mb-6">Legal Awareness</h1>
-      
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">Did You Know?</h2>
         <div className="relative mt-16">
