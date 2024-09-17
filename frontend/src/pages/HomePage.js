@@ -66,7 +66,7 @@ const HomePage = () => {
       </section>
       
       {/* About Us Section */}
-      <section>
+      <section className="z-100">
         <AboutUs />
       </section>
 

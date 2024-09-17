@@ -6,7 +6,7 @@ import card3 from '../assets/images/card3.png';
 
 const FeaturesSection = () => {
   return (
-    <section className="relative h-screen">
+    <section className="relative h-screen z-0">
       <div className="absolute inset-0 flex flex-col items-center justify-center text-left p-6">
         <h1 className="text-4xl font-bold mb-4 feature-heading">Upgrade Your Knowledge.<br/> Start Today!</h1>
         {/* <h2 className="text-2xl font-medium mb-12">Discover the best we have to offer</h2> */}

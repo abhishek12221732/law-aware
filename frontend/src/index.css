@@ -229,3 +229,44 @@ text-fill-color: transparent;
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 }
+
+.lady{
+  margin-top: -200px;
+}
+
+.about-us-head{
+  /* About Us */
+
+
+font-family: 'Abhaya Libre';
+font-style: normal;
+font-weight: 700;
+font-size: 80px;
+line-height: 90%;
+/* or 72px */
+
+background: linear-gradient(258.44deg, #FAD47D 4.55%, #AB7529 42.13%, #D3A553 82.84%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.about-us-text{
+  /* At LawAware, our mission is to empower Indian citizens by making legal knowledge accessible, engaging, and practical. Our platform simplifies complex legal concepts through articles, games and FAQs.LawAware aims to create a society where citizens are well-informed, legally empowered, and confident in navigating the laws that govern their lives.Knowledge of the law isn't just useful—it’s essential for everyday life. */
+
+font-family: 'Gothic A1';
+font-style: normal;
+font-weight: 300;
+font-size: 23px;
+line-height: 138%;
+/* or 32px */
+letter-spacing: 0.02em;
+
+color: #FFF2F2;
+
+
+}
