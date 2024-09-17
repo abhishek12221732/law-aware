@@ -35,7 +35,7 @@ function App() {
         {/* Add more routes as needed */}
         
       </Routes>
-      <Chatbot />
+      <Chatbot/>
     </Router>
   );
 }

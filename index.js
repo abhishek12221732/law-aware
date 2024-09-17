@@ -6,11 +6,11 @@ import authRoutes from './routes/auth.route.js';
 import postRoutes from './routes/post.route.js';
 import quizRoutes from './routes/quiz.route.js';
 import cookieParser from 'cookie-parser';
+import bodyParser from 'body-parser';
 import path from 'path';
 import cors from 'cors';
 
 dotenv.config();
-console.log(process.env.MONGO_URI);
 await mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
@@ -21,15 +21,7 @@ await mongoose
   });
 
  
-  
-// const connect = async () => {
-//   try {
-//     await mongoose.connect(process.env.MONGO_URL);
-//     console.log("Connected to mongoDB.");
-//   } catch (error) {
-//     throw error;
-//   }
-// };
+ 
 
 const __dirname = path.resolve();
 
@@ -37,11 +29,8 @@ const app = express();
 
  // Apply CORS policy
  app.use(cors());
-
-
-
 app.use(cookieParser()); // To parse cookies
-app.use(express.json()); // To parse JSON bodies
+app.use(bodyParser.json());
 
 const PORT = process.env.PORT || 3000;
 
