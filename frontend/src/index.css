@@ -157,3 +157,54 @@ background-clip: text;
 
 
 }
+
+
+.news-card{
+  /* Rectangle 5 */
+
+
+
+background: #1E1E1E;
+box-shadow: -8px 4px 6px 1px rgba(0, 0, 0, 0.15);
+border-radius: 20px;
+
+}
+
+hr{
+  /* Line 2 */
+
+
+width: 1110px;
+height: 0px;
+/* Line 2 */
+
+
+
+
+
+}
+
+.news-text{
+  /* News */
+
+
+
+
+font-family: 'Abhaya Libre';
+font-style: normal;
+font-weight: 700;
+font-size: 80px;
+line-height: 98%;
+/* or 78px */
+letter-spacing: 0.01em;
+
+background: linear-gradient(258.44deg, #FAD47D 4.55%, #AB7529 42.13%, #D3A553 82.84%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+margin-bottom: 2%;
+
+}
