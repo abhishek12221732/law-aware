@@ -82,11 +82,13 @@ const Chatbot = () => {
   return (
     <div className="relative">
       <button
-        className="fixed bottom-4 right-4 p-4 bg-blue-500 text-white rounded-full shadow-lg focus:outline-none z-10"
-        onClick={() => document.querySelector('.chatbot').classList.toggle('hidden')}
-      >
-        <span className="material-symbols-rounded">mode_comment</span>
-      </button>
+  className="fixed bottom-4 right-4 p-4 bg-blue-500 text-white rounded-full shadow-lg focus:outline-none z-10"
+  style={{ width: '64px', height: '64px', borderRadius: '50%' }}
+  onClick={() => document.querySelector('.chatbot').classList.toggle('hidden')}
+>
+  <span className="material-symbols-rounded">mode_comment</span>
+</button>
+
 
       <div className="chatbot hidden fixed bottom-4 right-20 w-full max-w-sm bg-white border border-gray-300 shadow-lg rounded-lg z-10">
         <header className="flex items-center justify-between p-4 border-b border-gray-200">

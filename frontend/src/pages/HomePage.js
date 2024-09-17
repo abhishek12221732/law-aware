@@ -5,37 +5,44 @@ import PreambleSection from "../components/PreambleSection.js";
 import NewsSection from "../components/NewsSection.js";
 import AboutUs from "../components/AboutUs.js";
 import FAQSection from "../components/FAQSection.js";
+import arrowIcon from "../assets/images/arrow1.png";
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen bg-black text-gray-300">
+    <div className="min-h-screen bg-[#01161B] text-gray-300">
       {/* Hero Section */}
-      <section className="bg-gray-900 text-white py-20 h-screen flex items-center justify-center mt-16">
+      <section className=" text-white py-20 h-screen flex items-center justify-center">
         <div className="container mx-auto flex items-center">
           {/* <!-- Left side: Centered text and button --> */}
           <div className="w-1/2 flex flex-col items-center justify-center p-8">
-            <h2 className="text-4xl font-bold mb-4 text-center">
-              Empowering You with Legal Knowledge
+            <h2 className="text-xl font-bold mb-4 text-center hero-heading">
+              Your Rights, Your Power.
             </h2>
-            <p className="text-lg mb-6 text-center">
-              Understand your rights, stay informed, and become aware of the
-              laws that matter to you.
+            <p className="text-lg mb-6 text-center hero-text">
+            An One-Stop Learning Solution about<br/>
+            the Laws and Rights that protect you.
             </p>
             <Link
               to="/awareness"
-              className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold"
-            >
-              Get Started
+              className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hero-button"
+            ><div className="hero-button-text flex justify-between">Get Started 
+            <img
+                src={arrowIcon}
+              />
+            </div>
+              
             </Link>
           </div>
 
           {/* <!-- Right side: Image --> */}
-          <div className="w-1/2 flex items-center justify-center">
-            <img
-              src={emblemImage}
-              alt="Legal knowledge"
-              className="w-2/3 max-w-full h-auto"
-            />
+          <div className="w-1/2 h-screen flex items-center justify-center">
+            <div className="relative h-full w-auto overflow-hidden shadow-lg">
+              <img
+                src={emblemImage}
+                alt="Legal knowledge"
+                className="h-full w-auto object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -45,25 +52,20 @@ const HomePage = () => {
         <PreambleSection />
       </section>
 
-
       {/* News Section of Page */}
       <section>
         <NewsSection />
       </section>
-
 
       {/* Abiut Us Section */}
       <section>
         <AboutUs />
       </section>
 
-
       {/* FAQ Section */}
       <section>
         <FAQSection />
       </section>
-
-      
 
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-300 py-4">
