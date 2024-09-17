@@ -49,7 +49,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-300 via-pink-300 to-red-300 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-black p-4">
       <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-8 space-y-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -57,7 +57,7 @@ export default function LoginPage() {
           transition={{ type: 'spring', stiffness: 80, delay: 0.2 }}
           className="text-center"
         >
-          <Link to="/" className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+          <Link to="/" className="text-4xl font-bold text-black">
             LawAware
           </Link>
           <p className="text-gray-600 mt-2 text-lg">Sign in with your email and password</p>

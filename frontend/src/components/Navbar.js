@@ -20,11 +20,7 @@ const Navbar = () => {
           <Link to="/" className="hover:text-gray-200">HOME</Link>
           <Link to="/learning" className="hover:text-gray-200">LEARNING</Link>
           <Link to="/awareness" className="hover:text-gray-200">AWARENESS</Link>
-          <Link to="/login" className="flex items-center hover:text-gray-200"></Link>
-          <Link to="/" className="hover:text-gray-200">Home</Link>
-          <Link to="/learning" className="hover:text-gray-200">Learning</Link>
-          <Link to="/awareness" className="hover:text-gray-200">Awareness</Link>
-          <Link to="/userProfile" className="flex items-center hover:text-gray-200">
+          <Link to="/login" className="flex items-center hover:text-gray-200">
             <UserIcon className="h-6 w-6 text-gray-300" />
           </Link>
         </div>

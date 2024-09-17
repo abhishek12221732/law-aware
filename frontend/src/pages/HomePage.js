@@ -6,6 +6,7 @@ import NewsSection from "../components/NewsSection.js";
 import AboutUs from "../components/AboutUs.js";
 import FAQSection from "../components/FAQSection.js";
 import line from "../assets/images/line.png";
+import FeaturesSection from "../components/FeatureSection.js";
 
 const HomePage = () => {
   return (
@@ -58,9 +59,14 @@ const HomePage = () => {
         <NewsSection />
         <img src={line} className="lines mx-auto mt-12"></img>
       </section>
+
+      {/* Feature Section */}
+      <section>
+        <FeaturesSection />
+      </section>
       
       {/* About Us Section */}
-      <section>
+      <section className="z-100">
         <AboutUs />
       </section>
 
