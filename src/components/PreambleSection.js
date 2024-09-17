@@ -10,10 +10,10 @@ function PreambleSection() {
   useEffect(() => {
     const splitTypes = document.querySelectorAll('.highlight-text');
     splitTypes.forEach((char, i)=>{
-        const text = new SplitType(char, { types: 'chars'});
+        const text = new SplitType(char, { types: 'words'});
 
     gsap.from(
-      text.chars,
+      text.words,
       {
         color: 'white', // Your preferred highlight color
         scrollTrigger: {
