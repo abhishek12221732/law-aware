@@ -9,6 +9,7 @@ import Lenis from '@studio-freight/lenis';
 import Chatbot from './components/Chatbot';
 import LoginPage from './components/LoginPage';
 import RegisterPage from './components/RegisterPage';
+import ArticleList from './components/ArticlesPage';
 
 function App() {
   useEffect(() => {
@@ -36,6 +37,7 @@ function App() {
         <Route path="/games" element={<GamesPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage/>} />
+        <Route path="/article" element={<ArticleList/>} />
         {/* Add more routes as needed */}
         
       </Routes>

@@ -17,8 +17,6 @@ const Navbar = () => {
           <Link to="/userProfile" className="flex items-center hover:text-gray-200">
             <UserIcon className="h-6 w-6 text-gray-300" />
           </Link>
-            )
-          }
         </div>
       </nav>
     </header>
