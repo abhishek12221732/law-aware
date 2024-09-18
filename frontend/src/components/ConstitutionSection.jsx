@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ConstitutionFeature = () => {
   return (
@@ -10,9 +11,9 @@ const ConstitutionFeature = () => {
         <p className="text-white mb-6 text-lg opacity-0 animate-fade-in-up-fast">
           Dive deep into the Indian Constitution and enhance your knowledge. Discover the core values, articles, and rights that shape our society.
         </p>
-        <button className="px-6 py-3 mt-4 bg-transparent border-2 border-gradient text-white rounded-full font-semibold transition duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#FAD47D] hover:via-[#AB7529] hover:to-[#D3A553] hover:text-white">
+        <Link to="/article"><button className="px-6 py-3 mt-4 bg-transparent border-2 border-gradient text-white rounded-full font-semibold transition duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#FAD47D] hover:via-[#AB7529] hover:to-[#D3A553] hover:text-white">
           Click to Learn
-        </button>
+        </button></Link>
       </div>
     </section>
   );
