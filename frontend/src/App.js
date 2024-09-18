@@ -13,6 +13,7 @@ import ArticleList from './components/ArticlesPage';
 import SingleArticle from './components/SingleArticle';
 import QuizPage from './components/QuizPage';
 import UserProfilePage from './components/UserProfile';
+import LearningPage from './pages/LearningPage.js';
 
 function App() {
   useEffect(() => {
@@ -44,6 +45,7 @@ function App() {
         <Route path="/article/:articleId" element={<SingleArticle />} />
         <Route path="/quiz" element={<QuizPage />} />
         <Route path="/profile" element={<UserProfilePage/>} />
+        <Route path='/learning' element={<LearningPage/>} />
         {/* Add more routes as needed */}
         
       </Routes>
