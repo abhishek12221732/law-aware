@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { Link } from 'react-router-dom'; // Import Link for navigation
+import line from '../assets/images/line.png';
 
 const faqData = [
   {
@@ -35,12 +36,12 @@ const FAQSection = () => {
   return (
     <div className="bg-gray-900 p-8 min-h-screen">
       {/* Heading */}
-      <h2 className="text-4xl font-bold text-white mb-8 text-center">
+      <h2 className="text-4xl font-bold text-white mb-8 text-center feature-heading">
         Frequently Asked Legal Questions
       </h2>
 
       {/* FAQ Boxes */}
-      <div className="space-y-4 max-w-5xl mx-auto"> {/* Increased width */}
+      <div className="space-y-4 max-w-7xl mx-auto"> {/* Increased width */}
         {faqData.map((faq, index) => (
           <div
             key={index}
@@ -73,11 +74,13 @@ const FAQSection = () => {
       {/* More FAQ Button */}
       <div className="mt-8 flex justify-center">
         <Link to="/faq-page">
-          <button className="bg-blue-500 text-white py-2 px-6 rounded-lg shadow-lg hover:bg-blue-600">
+          <button className="bg-yellow-800 text-white py-2 px-6 rounded-lg shadow-lg hover:bg-orange-800">
             More FAQs
           </button>
         </Link>
+        
       </div>
+      <img src={line} className="lines mx-auto mt-8"></img>
     </div>
   );
 };

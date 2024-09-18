@@ -20,8 +20,8 @@ const HomePage = () => {
               Your Rights, Your Power.
             </h2>
             <p className="text-lg mb-6 text-center hero-text">
-            An One-Stop Learning Solution about<br/>
-            the Laws and Rights that protect you.
+            <span className="darking opacity-50">An</span> One-Stop Learning Solution <span className="darking opacity-50">about<br/>
+            the </span>Laws and Rights <span className="darking opacity-50">that protect you.</span>
             </p>
             <Link
               to="/awareness"
