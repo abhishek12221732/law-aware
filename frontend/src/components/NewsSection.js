@@ -137,7 +137,7 @@ const CriminalActsSlider = () => {
         modules={[Pagination, Autoplay]}
         spaceBetween={30}
         slidesPerView={1}
-        pagination={{ clickable: true }}
+        pagination={{ dynamicBullets: true }}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         loop={true}
         className="w-full max-w-4xl"
