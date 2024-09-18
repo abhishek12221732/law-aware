@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 html.lenis, html.lenis body {
   height: auto;
 }
@@ -224,7 +225,7 @@ background: linear-gradient(258.44deg, #FAD47D 4.55%, #AB7529 42.13%, #D3A553 82
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 background-clip: text;
-text-fill-color: transparent;
+-webkit-text-fill-color: transparent;
 
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
@@ -269,4 +270,15 @@ letter-spacing: 0.02em;
 color: #FFF2F2;
 
 
+}
+
+
+/* Swiper Pagination */
+/* .swiper-pagination-bullet {
+  background-color: yellow !important; /* Set the default color of the bullets 
+} */
+
+
+.swiper-pagination-bullet-active {
+  background-color: orange !important; /* Set the color of the active bullet */
 }

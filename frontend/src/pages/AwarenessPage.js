@@ -1,7 +1,7 @@
 // src/pages/AwarenessPage.js
 
 import React, { useState, useEffect } from 'react';
-import { useTransition, animated } from 'react-spring';
+import FactsSlider from '../components/FactsSlider';
 
 const facts = [
   "Did you know? The right to freedom of speech is a fundamental right.",
@@ -12,37 +12,15 @@ const facts = [
 ];
 
 const AwarenessPage = () => {
-  const [index, setIndex] = useState(0);
-
-  const transitions = useTransition(index, {
-    from: { opacity: 0, transform: 'translateY(-20px)' },
-    enter: { opacity: 1, transform: 'translateY(0)' },
-    leave: { opacity: 0, transform: 'translateY(20px)' },
-    reset: true,
-  });
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex(prevIndex => (prevIndex + 1) % facts.length);
-    }, 5000); // Change fact every 5 seconds
-    return () => clearInterval(interval);
-  }, []);
+  
 
   return (
     <div className="min-h-screen bg-gray-100 p-8 mt-16">
       <h1 className="text-4xl font-bold mb-6">Legal Awareness</h1>
-      
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Did You Know?</h2>
+        <FactsSlider facts={facts}/>
         <div className="relative mt-16">
-          {transitions((style, i) => (
-            <animated.div
-              style={style}
-              className="absolute inset-0 flex items-center justify-center text-lg font-medium bg-white p-6 shadow-lg rounded-lg"
-            >
-              {facts[i]}
-            </animated.div>
-          ))}
+          
         </div>
       </section>
       
