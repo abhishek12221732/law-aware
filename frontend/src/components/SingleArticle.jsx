@@ -10,28 +10,60 @@ const SingleArticle = () => {
   const [error, setError] = useState(null);
   const [liked, setLiked] = useState(false);
   const [bookmarked, setBookmarked] = useState(false);
+  const [comments, setComments] = useState([]);
+  const [newComment, setNewComment] = useState('');
   const { articleId } = useParams();
 
-  // Function to ping the backend and mark the article as read
-  const markArticleAsRead = async (articleId) => {
+  // Function to mark the article as read
+  const markArticleAsRead = async () => {
     try {
-      // POST request to mark the article as read if user is logged in
       await axios.post(`${base_url}/api/article/read/${articleId}`, {}, { withCredentials: true });
     } catch (err) {
       console.error('Failed to mark the article as read', err);
     }
   };
 
+  // Function to like/unlike the article
+  const likeArticle = async () => {
+    try {
+      await axios.put(`${base_url}/api/article/like/${articleId}`, {}, { withCredentials: true });
+      setLiked((prevLiked) => !prevLiked);
+    } catch (err) {
+      console.error('Failed to like the article', err);
+    }
+  };
+
+  // Updated function to add a new comment
+  const addComment = async () => {
+    if (!newComment.trim()) return;
+    try {
+      const response = await axios.post(`${base_url}/api/article/comment/${articleId}`, { text: newComment }, { withCredentials: true });
+      console.log('New comment response:', response.data);
+      
+      const newCommentObject = {
+        text: newComment,
+        user: 'Anonymous User', // Or however you want to represent the current user
+        // Add any other fields that your comment object should have
+      };
+      
+      setComments((prevComments) => [...prevComments, newCommentObject]);
+      setNewComment('');
+    } catch (err) {
+      console.error('Failed to add comment', err);
+    }
+  };
+
+  // Fetch article, comments, like status, and mark it as read on component mount
   useEffect(() => {
     const fetchArticle = async () => {
       try {
-        // Fetch the article from the backend
         const response = await axios.get(`${base_url}/api/article/get/${articleId}`, { withCredentials: true });
+        console.log('Fetched article data:', response.data);
         setArticle(response.data);
         setIsLoading(false);
-
-        // Mark the article as read after successful fetch
-        markArticleAsRead(articleId);
+        setLiked(response.data.liked);
+        setComments(response.data.comments || []);
+        markArticleAsRead();
       } catch (err) {
         setError('Failed to load the article. Please try again later.');
         setIsLoading(false);
@@ -79,7 +111,7 @@ const SingleArticle = () => {
               <p className="text-lg text-blue-600 font-semibold">Article {article.article}</p>
               <div className="flex space-x-4">
                 <button 
-                  onClick={() => setLiked(!liked)} 
+                  onClick={likeArticle} 
                   className={`transition-colors duration-300 ${liked ? 'text-red-500' : 'text-gray-400 hover:text-red-500'}`}
                 >
                   <FaHeart className="h-6 w-6" />
@@ -123,6 +155,41 @@ const SingleArticle = () => {
             </div>
           </div>
         </article>
+
+        {/* Updated Comments Section */}
+        <div className="bg-white p-6 mt-6 shadow rounded-lg">
+          <h2 className="text-2xl font-semibold mb-4">Comments</h2>
+          {comments.length > 0 ? (
+            comments.map((comment, index) => (
+              <div key={index} className="mb-4">
+                <p className="text-sm font-semibold">
+                  {comment.user || 'Anonymous User'}
+                </p>
+                <p className="text-gray-700">{comment.text}</p>
+              </div>
+            ))
+          ) : (
+            <p className="text-gray-500">No comments yet. Be the first to comment!</p>
+          )}
+
+          {/* Add Comment Form */}
+          <div className="mt-6">
+            <textarea
+              value={newComment}
+              onChange={(e) => setNewComment(e.target.value)}
+              className="w-full p-3 border rounded-lg"
+              rows="3"
+              placeholder="Write a comment..."
+            ></textarea>
+            <button
+              onClick={addComment}
+              className="mt-2 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-300"
+            >
+              Add Comment
+            </button>
+          </div>
+        </div>
+
         <div className="mt-10 text-center">
           <Link
             to="/article"

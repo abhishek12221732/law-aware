@@ -1,20 +1,35 @@
 import mongoose from 'mongoose';
 
 const articleSchema = new mongoose.Schema({
-    article: {
+  title: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+    required: true,
+  },
+  likes: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+  }],
+  comments: [{
+    userId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+    },
+    text: {
       type: String,
       required: true,
     },
-    title: {
-      type: String,
-      required: true,
+    createdAt: {
+      type: Date,
+      default: Date.now,
     },
-    description: {
-      type: String,
-      required: true,
-    },
-  }, { timestamps: true });
-  
-  const Article = mongoose.model('Article', articleSchema);  
+  }],
+  // Other fields like createdAt, updatedAt, etc.
+}, { timestamps: true });
+
+const Article = mongoose.model('Article', articleSchema);
 
 export default Article;

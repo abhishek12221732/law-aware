@@ -29,7 +29,7 @@ const __dirname = path.resolve();
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:3000',  // Replace with your frontend domain
+  origin: 'http://localhost:3001',  // Replace with your frontend domain
   credentials: true,  // Allow cookies to be sent/received
 }));
 
