@@ -13,8 +13,7 @@ import ArticleList from './components/ArticlesPage';
 import SingleArticle from './components/SingleArticle';
 import QuizPage from './components/QuizPage';
 import UserProfilePage from './components/UserProfile';
-import LearningPage from './pages/LearningPage.js';
-import TypeAnimationComponent from './components/TypeAnimationComponent.jsx';
+import LearningPage from './components/LearningPage.jsx';
 
 function App() {
   useEffect(() => {
