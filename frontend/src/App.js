@@ -14,6 +14,7 @@ import SingleArticle from './components/SingleArticle';
 import QuizPage from './components/QuizPage';
 import UserProfilePage from './components/UserProfile';
 import LearningPage from './pages/LearningPage.js';
+import TypeAnimationComponent from './components/TypeAnimationComponent.jsx';
 
 function App() {
   useEffect(() => {

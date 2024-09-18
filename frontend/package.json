@@ -24,6 +24,7 @@
     "react-router-dom": "^6.26.2",
     "react-scripts": "5.0.1",
     "react-spring": "^9.7.4",
+    "react-type-animation": "^3.2.0",
     "split-type": "^0.3.4",
     "swiper": "^11.1.14",
     "web-vitals": "^2.1.4"

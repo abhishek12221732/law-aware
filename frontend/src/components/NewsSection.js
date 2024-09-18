@@ -132,7 +132,7 @@ const criminalActs = [
 const CriminalActsSlider = () => {
   return (
     <div className="relative flex items-center justify-center p-4 bg-black shadow-md rounded-lg flex-col">
-      <h2 className="text-white text-2xl font-bold mb-4">Criminal Acts</h2>
+      <h2 className="text-white text-2xl font-bold mb-4 news-text">NEWS</h2>
       <Swiper
         modules={[Pagination, Autoplay]}
         spaceBetween={30}
@@ -144,7 +144,7 @@ const CriminalActsSlider = () => {
       >
         {criminalActs.map((act, index) => (
           <SwiperSlide key={index}>
-            <div className="flex rounded-lg shadow-lg overflow-hidden bg-gray-800 h-70">
+            <div className="flex rounded-lg shadow-lg overflow-hidden bg-gray-800 h-70 news-card">
               {/* Image Section */}
               <div className="flex-shrink-0 w-1/3 border-r border-gray-700 overflow-hidden">
                 <img

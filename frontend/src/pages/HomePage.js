@@ -26,7 +26,7 @@ const HomePage = () => {
             <Link
               to="/awareness"
               className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hero-button"
-            ><div className="hero-button-text flex justify-between">Get Started 
+            ><div className="hero-button-text text-center">Get Started 
             {/* <img
                 src={arrowIcon}
               /> */}
@@ -36,8 +36,8 @@ const HomePage = () => {
           </div>
 
           {/* <!-- Right side: Image --> */}
-          <div className="w-1/2 h-screen flex items-center justify-center">
-            <div className="relative h-full w-auto overflow-hidden shadow-lg">
+          <div className="w-1/2 h-screen flex items-center">
+            <div className="relative h-full w-auto overflow-hidden shadow-lg -mr-20">
               <img
                 src={emblemImage}
                 alt="Legal knowledge"

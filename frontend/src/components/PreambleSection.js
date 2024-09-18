@@ -32,9 +32,11 @@ function PreambleSection() {
 
   return (
     <div className='text-7xl px-32 bg-black mb-20'>
-      <h1 className='highlight-text highlight-heading'>Preamble of The Constitution of India</h1>
-      <p className='highlight-text'>We, the people of India, having solemnly resolved to constitute India into a Sovereign Socialist Secular Democratic Republic and to secure to all its citizens:</p>
-      
+      <h1 className=' highlight-heading text-center pt-10'>Preamble</h1>
+      <p className='highlight-text'>We, the people of India,</p>
+      <p className='highlight-text'>having solemnly resolved to constitute India into a </p>
+      <p className='highlight-text'>SOVEREIGN SOCIALIST SECULAR DEMOCRATIC REPUBLIC and</p>
+      <p className='highlight-text'>to secure to all its citizens:</p>
         <p className='highlight-text'>JUSTICE, social, economic and political;</p>
         <p className='highlight-text'>LIBERTY of thought, expression, belief, faith and worship;</p>
         <p className='highlight-text'>EQUALITY of status and of opportunity;</p>
