@@ -142,3 +142,94 @@ export const updateArticle = async (req, res, next) => {
     next(error);
   }
 };
+
+
+
+// Like or Unlike an article
+export const likeArticle = async (req, res, next) => {
+  try {
+      const article = await Article.findById(req.params.articleId);
+      if (!article) {
+          return next(errorHandler(404, 'Article not found'));
+      }
+
+      // Check if the user has already liked the article
+      if (article.likes.includes(req.user.id)) {
+          // Unlike the article
+          article.likes.pull(req.user.id);
+          await article.save();
+          return res.status(200).json({ message: 'Article unliked' });
+      }
+
+      // Like the article
+      article.likes.push(req.user.id);
+      await article.save();
+
+      res.status(200).json({ message: 'Article liked' });
+  } catch (error) {
+      next(error);
+  }
+};
+
+
+// Add a comment to an article
+export const commentOnArticle = async (req, res, next) => {
+  try {
+      const article = await Article.findById(req.params.articleId);
+      if (!article) {
+          return next(errorHandler(404, 'Article not found'));
+      }
+
+      const comment = {
+          userId: req.user.id,
+          text: req.body.text
+      };
+
+      article.comments.push(comment);
+      await article.save();
+
+      res.status(201).json({ message: 'Comment added' });
+  } catch (error) {
+      next(error);
+  }
+};
+
+
+
+// Controller to fetch the like status of an article for the logged-in user
+export const getLikeStatus = async (req, res) => {
+  try {
+    const { articleId } = req.params;
+    const userId = req.user.id;  // Assuming the user ID is available in the token
+
+    const article = await Article.findById(articleId);
+
+    if (!article) {
+      return res.status(404).json({ message: 'Article not found' });
+    }
+
+    // Check if the user has liked the article
+    const liked = article.likes.includes(userId);
+
+    return res.status(200).json({ liked });
+  } catch (err) {
+    return res.status(500).json({ message: 'Failed to get like status', error: err });
+  }
+};
+
+// Controller to fetch all comments for an article
+export const getComments = async (req, res) => {
+  try {
+    const { articleId } = req.params;
+
+    const article = await Article.findById(articleId).populate('comments.userId', 'username');  // Populate user data for comments
+
+    if (!article) {
+      return res.status(404).json({ message: 'Article not found' });
+    }
+
+    return res.status(200).json({ comments: article.comments });
+  } catch (err) {
+    return res.status(500).json({ message: 'Failed to get comments', error: err });
+  }
+};
