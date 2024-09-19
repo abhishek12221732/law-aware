@@ -329,3 +329,9 @@ color: #FFF2F2;
 .feature-second{
   color: white;
 }
+
+.modal-content {
+  max-height: 80vh; /* or adjust to your needs */
+  overflow-y: auto;
+}
+

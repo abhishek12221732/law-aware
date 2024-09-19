@@ -12,6 +12,9 @@ module.exports = {
         'fade-in-right-fast': 'fadeInRightFast 0.5s ease-out forwards',
         'wave-bg': 'waveBorder 3s infinite ease-in-out',
       },
+      colors:{
+        gold: '#FFD700',
+      },
       keyframes: {
         fadeInDownFast: {
           '0%': { opacity: 0, transform: 'translateY(-20px)' },
