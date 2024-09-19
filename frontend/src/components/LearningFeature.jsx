@@ -1,6 +1,7 @@
 import React from 'react';
 import card1 from '../assets/images/card1.png';
 import card3 from '../assets/images/card3.png';
+import { Link } from 'react-router-dom';
 
 const LearningFeature = () => {
   return (
@@ -18,9 +19,11 @@ const LearningFeature = () => {
             className="w-full md:w-[48%] h-80 bg-cover bg-center rounded-lg shadow-lg transform transition-transform duration-500 ease-out hover:scale-105 hover:shadow-2xl"
             style={{ backgroundImage: `url(${card1})` }}
           >
+            <Link to='/quiz'>
             <div className="flex items-center justify-center h-full bg-black bg-opacity-30 rounded-lg text-white text-lg font-bold backdrop-blur-sm hover:backdrop-blur-none transition duration-500 ease-out">
               <div className="opacity-100 hover:opacity-100 transition duration-500 ease-out">Games</div>
             </div>
+            </Link>
           </div>
           
 
