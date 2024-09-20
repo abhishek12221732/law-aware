@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import PDFViewer from '../components/PdfViewer';
 
 const facts = [
   "Did you know? The right to freedom of speech is a fundamental right.",
@@ -28,7 +29,9 @@ const FactsSlider = ({ facts }) => {
   }, [facts.length]);
 
   return (
-    <div className="bg-gradient-to-r from-[#01161B] to-[#022a33] text-white p-4 overflow-hidden">
+    <div 
+      className="bg-gradient-to-r from-[#01161B] to-[#022a33] text-white p-2" 
+    >
       <AnimatePresence mode="wait">
         <motion.div
           key={currentFactIndex}
@@ -36,7 +39,8 @@ const FactsSlider = ({ facts }) => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -50, opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center font-semibold text-lg"
+          className="text-center font-semibold mt-32 -mb-32"
+          style={{ fontSize: '2rem' }} // Increase font size
         >
           {facts[currentFactIndex]}
         </motion.div>
@@ -55,22 +59,21 @@ const AwarenessPage = () => {
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-[#01161B] to-[#022a33] text-white">
       {/* Header */}
-      <header className="fixed top-0 left-0 w-full z-30 bg-[#01161B] shadow-lg">
+      <header className="fixed top-0 left-0 w-full z-20 bg-[#01161B] shadow-lg">
         <div className="container mx-auto px-4 py-4">
           <h1 className="text-2xl font-bold text-[#FAD47D]"></h1>
         </div>
       </header>
 
       {/* Facts Slider */}
-      <div className="fixed top-14 left-0 w-full z-20 text-3xl">
-        <FactsSlider facts={facts} className="text-3xl" />
-      </div>
+      <FactsSlider facts={facts} />
 
       {/* Main Content */}
-      <div className="flex pt-32">
+      <div className="flex pt-40"> {/* Increased padding to make space for fixed facts */}
         {/* Awareness Cards Area (75% Width) */}
         <div className="w-3/4 p-8">
           <h2 className="text-3xl font-semibold mb-8 text-[#FAD47D]">Legal Awareness Topics</h2>
+          
           <AnimatePresence mode="wait">
             {activeCard && (
               <motion.div
@@ -79,7 +82,7 @@ const AwarenessPage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -50 }}
                 transition={{ duration: 0.5 }}
-                className="p-6 bg-[#033641] rounded-lg shadow-lg"
+                className="p-6 bg-[#033641] rounded-lg shadow-lg m-4"
               >
                 <h3 className="text-2xl font-semibold mb-4 text-[#FAD47D]">
                   {awarenessCards.find(card => card.id === activeCard)?.title}
@@ -90,10 +93,11 @@ const AwarenessPage = () => {
               </motion.div>
             )}
           </AnimatePresence>
+          <PDFViewer/>
         </div>
 
-        {/* Fixed Right Sidebar (25% Width) */}
-        <div className="w-1/4 fixed right-0 top-0 h-full flex flex-col justify-start items-stretch pt-32 bg-[#022a33] shadow-lg">
+        {/* Right Sidebar (25% Width) */}
+        <div className="w-1/4 mt-8 bg-[#022a33] shadow-lg"> {/* Adjust margin-top to position below the FactsSlider */}
           {awarenessCards.map((card) => (
             <motion.div
               key={card.id}
@@ -114,5 +118,6 @@ const AwarenessPage = () => {
     </div>
   );
 };
+
 
 export default AwarenessPage;

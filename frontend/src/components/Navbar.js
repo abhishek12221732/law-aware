@@ -8,7 +8,7 @@ import { base_url } from '../constants/contants';
 
 const Navbar = () => {
   return (
-    <header className="bg-opacity-75 bg-[#01161B] p-4 text-gray-300 fixed w-full top-0 left-0 z-50">
+    <header className="bg-opacity-75 backdrop-blur-sm p-4 text-gray-300 fixed w-full top-0 left-0 z-50">
       <nav className="flex items-center justify-between container mx-auto">
         <h1 className="text-2xl font-bold">
           <img
