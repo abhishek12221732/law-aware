@@ -21,7 +21,7 @@ await mongoose
     console.log(err);
   });
 
- const F_PORT = process.env.MONGO_URI || 3000;
+ const F_PORT = process.env.F_PORT || 3000;
  
 
 const __dirname = path.resolve();
