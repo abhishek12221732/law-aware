@@ -21,7 +21,7 @@ await mongoose
     console.log(err);
   });
 
- 
+ const F_PORT = process.env.MONGO_URI || 3000;
  
 
 const __dirname = path.resolve();
@@ -29,7 +29,7 @@ const __dirname = path.resolve();
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:3001',  // Replace with your frontend domain
+  origin: `http://localhost:${F_PORT}`,  // Replace with your frontend domain
   credentials: true,  // Allow cookies to be sent/received
 }));
 
