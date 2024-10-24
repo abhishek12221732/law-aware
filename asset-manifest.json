@@ -1,16 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.51014cb4.css",
-    "main.js": "/static/js/main.9bbd7c57.js",
-    "static/js/453.171de0aa.chunk.js": "/static/js/453.171de0aa.chunk.js",
-    "static/media/emblem.png": "/static/media/emblem.af38e49dacf4a76600f3.png",
-    "index.html": "/index.html",
-    "main.51014cb4.css.map": "/static/css/main.51014cb4.css.map",
-    "main.9bbd7c57.js.map": "/static/js/main.9bbd7c57.js.map",
-    "453.171de0aa.chunk.js.map": "/static/js/453.171de0aa.chunk.js.map"
+    "main.css": "/law-aware/static/css/main.355bf239.css",
+    "main.js": "/law-aware/static/js/main.c769884d.js",
+    "static/js/453.171de0aa.chunk.js": "/law-aware/static/js/453.171de0aa.chunk.js",
+    "static/media/doc.pdf": "/law-aware/static/media/doc.aeacb208c1d1633b24da.pdf",
+    "static/media/emblem.png": "/law-aware/static/media/emblem.ca0bda2c6afe9da0701c.png",
+    "static/media/justicelady.png": "/law-aware/static/media/justicelady.e1b86c61450fec59b7cf.png",
+    "static/media/sidelogo.png": "/law-aware/static/media/sidelogo.8abbe0e91725dafff0a7.png",
+    "static/media/card3.png": "/law-aware/static/media/card3.e186177e0406f1361ba9.png",
+    "static/media/card1.png": "/law-aware/static/media/card1.20eeb58b812c21032dde.png",
+    "static/media/card2.png": "/law-aware/static/media/card2.c33a490ff756abf107ac.png",
+    "index.html": "/law-aware/index.html",
+    "main.355bf239.css.map": "/law-aware/static/css/main.355bf239.css.map",
+    "main.c769884d.js.map": "/law-aware/static/js/main.c769884d.js.map",
+    "453.171de0aa.chunk.js.map": "/law-aware/static/js/453.171de0aa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.51014cb4.css",
-    "static/js/main.9bbd7c57.js"
+    "static/css/main.355bf239.css",
+    "static/js/main.c769884d.js"
   ]
 }
