@@ -43,6 +43,8 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 
+
+
 app.use('/api/user', userRoutes);
 app.use('/api/auth', authRoutes);
 // quiz routes
